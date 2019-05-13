@@ -46,11 +46,56 @@ namespace deduction_fiscales
 
         private void bouton_calcul_Click(object sender, EventArgs e)
         {
-            float Jean;
-            resultat.Text = "Revenu imposable: fr. calcul";
+            float revan;
+            // revan = float.Parse(textBox1.Text);0.
+            if (!float.TryParse(textBox1.Text, out revan))
+            {
+                MessageBox.Show("erreur");
+                textBox1.Focus();
+                return;
+            }
+
+            float Cofam;
+            //Cofam = float.Parse(textBox2.Text);0.
+            if(!float.TryParse(textBox2.Text, out Cofam))
+            {
+                MessageBox.Show("erreur");
+                textBox2.Focus();
+                return;
+            }
+            float res;
+            res = revan / Cofam;
+            float dedujeune;
+            dedujeune = float.Parse(boxdeducjeune.Text);
+            float dedutrans;
+            dedutrans = float.Parse(boxdeductransport.Text);
+            float rabaisfid;
+            rabaisfid = float.Parse(boxrabais.Text);
+            if (rabais.Checked == true)
+            {
+                
+                res = res - (res / 100 * rabaisfid);
+            }
+            if (deduction_j.Checked == true)
+            {
+                res = res - dedujeune;
+            }
+            if (deduction_t.Checked == true)
+            {
+                res = res - dedutrans;
+            }
+            
+                
+            
+            resultat.Text = "Revenu imposable: fr. "+res.ToString();
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
