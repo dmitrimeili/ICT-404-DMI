@@ -54,15 +54,29 @@ namespace deduction_fiscales
                 textBox1.Focus();
                 return;
             }
-
+            if (revan < 20000)
+            {
+                MessageBox.Show("le revenu annuelle dois être superieur a 20000 CHF ");
+                textBox1.Focus();
+                return;
+            }
+            
             float Cofam;
-            //Cofam = float.Parse(textBox2.Text);0.
-            if(!float.TryParse(textBox2.Text, out Cofam))
+            if (!float.TryParse(textBox2.Text, out Cofam))
             {
                 MessageBox.Show("erreur");
                 textBox2.Focus();
                 return;
             }
+            if (Cofam > 10)
+            {
+                MessageBox.Show("Coefficient familial entre 1 et 10");
+                textBox2.Focus();
+                return;
+            }
+
+            //Cofam = float.Parse(textBox2.Text);0.
+           
             float res;
             res = revan / Cofam;
             float dedujeune;
@@ -71,13 +85,19 @@ namespace deduction_fiscales
             dedutrans = float.Parse(boxdeductransport.Text);
             float rabaisfid;
             rabaisfid = float.Parse(boxrabais.Text);
-            if (rabais.Checked == true)
+            if ((dedujeune+dedutrans) >= res && dedujeune < 0 && dedutrans<0)
+            {
+                MessageBox.Show("les deductions doivent etre positives et inferieur au resultat");
+                return;
+            }
+                if (rabais.Checked == true)
             {
                 
                 res = res - (res / 100 * rabaisfid);
             }
             if (deduction_j.Checked == true)
             {
+                
                 res = res - dedujeune;
             }
             if (deduction_t.Checked == true)
@@ -87,7 +107,8 @@ namespace deduction_fiscales
             
                 
             
-            resultat.Text = "Revenu imposable: fr. "+res.ToString();
+            resultat.Text = "Revenu imposable: "+res.ToString("C3");
+           
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

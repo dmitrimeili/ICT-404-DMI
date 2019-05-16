@@ -96,6 +96,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -104,6 +105,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(63, 20);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // boxdeducjeune
@@ -113,6 +115,7 @@
             this.boxdeducjeune.Size = new System.Drawing.Size(63, 20);
             this.boxdeducjeune.TabIndex = 3;
             this.boxdeducjeune.Text = "900";
+            this.boxdeducjeune.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.boxdeducjeune.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // boxrabais
@@ -122,6 +125,7 @@
             this.boxrabais.Size = new System.Drawing.Size(63, 20);
             this.boxrabais.TabIndex = 7;
             this.boxrabais.Text = "0";
+            this.boxrabais.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.boxrabais.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // boxdeductransport
@@ -131,6 +135,7 @@
             this.boxdeductransport.Size = new System.Drawing.Size(63, 20);
             this.boxdeductransport.TabIndex = 5;
             this.boxdeductransport.Text = "650";
+            this.boxdeductransport.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // bouton_calcul
             // 
