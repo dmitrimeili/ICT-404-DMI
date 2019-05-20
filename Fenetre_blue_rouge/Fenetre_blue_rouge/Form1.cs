@@ -12,6 +12,7 @@ namespace Fenetre_blue_rouge
 {
     public partial class Fenetre : Form
     {
+        Rectangle scr;
         public Fenetre()
         {
             InitializeComponent();
@@ -20,7 +21,8 @@ namespace Fenetre_blue_rouge
         private void Fenêtre_Load(object sender, EventArgs e)
             
         {
-           
+            Rectangle scr = Screen.GetBounds(this);
+
         }
 
         private void blue_Click(object sender, EventArgs e)
@@ -34,13 +36,14 @@ namespace Fenetre_blue_rouge
         }
 
         private void HautGauche_Click(object sender, EventArgs e)
-        {
-            Rectangle scr = Screen.GetBounds(this.Bounds);
-            MessageBox.Show(scr.X.ToString());
-            MessageBox.Show(scr.Y.ToString());
-            MessageBox.Show(scr.Width.ToString());
-            MessageBox.Show(scr.Height.ToString());
+        {          
+            this.Location = new Point(0,0);
 
+        }
+
+        private void HautDroite_Click(object sender, EventArgs e)
+        {
+            this.Location = new Point(scr.Y,0 );
         }
     }
 }

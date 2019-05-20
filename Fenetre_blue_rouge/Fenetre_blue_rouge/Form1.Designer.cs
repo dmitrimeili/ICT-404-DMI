@@ -56,6 +56,7 @@
             this.HautDroite.TabIndex = 1;
             this.HautDroite.Text = "Haut/Droite";
             this.HautDroite.UseVisualStyleBackColor = true;
+            this.HautDroite.Click += new System.EventHandler(this.HautDroite_Click);
             // 
             // blue
             // 
