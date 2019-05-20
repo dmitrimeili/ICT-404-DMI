@@ -51,6 +51,7 @@
             this.deduction_j.TabIndex = 2;
             this.deduction_j.Text = "Déduction jeune";
             this.deduction_j.UseVisualStyleBackColor = true;
+            this.deduction_j.CheckedChanged += new System.EventHandler(this.deduction_j_CheckedChanged);
             // 
             // deduction_t
             // 
@@ -71,6 +72,7 @@
             this.rabais.TabIndex = 6;
             this.rabais.Text = "Rabais fidélité (%)";
             this.rabais.UseVisualStyleBackColor = true;
+            this.rabais.CheckedChanged += new System.EventHandler(this.rabais_CheckedChanged);
             // 
             // revenu_ab
             // 

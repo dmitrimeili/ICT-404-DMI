@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Name: Meii Dmitri
+ * Date : 20.05.2019
+ * Title: Déduction
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -85,7 +91,19 @@ namespace deduction_fiscales
             dedutrans = float.Parse(boxdeductransport.Text);
             float rabaisfid;
             rabaisfid = float.Parse(boxrabais.Text);
-            if ((dedujeune+dedutrans) >= res && dedujeune < 0 && dedutrans<0)
+            if(dedujeune >= (res / 100 * 10))
+            {
+                deduction_j.Enabled = false;
+            }
+            if (dedutrans >= (res / 100 * 10))
+            {
+                deduction_t.Enabled = false;
+            }
+            if (rabaisfid >= (res / 100 * 10))
+            {
+                rabais.Enabled = false;
+            }
+            if ((dedujeune+dedutrans) >= res || dedujeune < 0 || dedutrans<0)
             {
                 MessageBox.Show("les deductions doivent etre positives et inferieur au resultat");
                 return;
@@ -117,6 +135,16 @@ namespace deduction_fiscales
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deduction_j_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rabais_CheckedChanged(object sender, EventArgs e)
         {
 
         }
