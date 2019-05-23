@@ -95,15 +95,17 @@
             this.Quitter.TabIndex = 5;
             this.Quitter.Text = "Quitter";
             this.Quitter.UseVisualStyleBackColor = true;
+            this.Quitter.Click += new System.EventHandler(this.Quitter_Click);
             // 
             // BasGauche
             // 
             this.BasGauche.Location = new System.Drawing.Point(12, 359);
             this.BasGauche.Name = "BasGauche";
-            this.BasGauche.Size = new System.Drawing.Size(75, 23);
+            this.BasGauche.Size = new System.Drawing.Size(89, 23);
             this.BasGauche.TabIndex = 6;
             this.BasGauche.Text = "Bas/Gauche";
             this.BasGauche.UseVisualStyleBackColor = true;
+            this.BasGauche.Click += new System.EventHandler(this.BasGauche_Click);
             // 
             // BasDroite
             // 
@@ -113,6 +115,7 @@
             this.BasDroite.TabIndex = 7;
             this.BasDroite.Text = "Bas/Droite";
             this.BasDroite.UseVisualStyleBackColor = true;
+            this.BasDroite.Click += new System.EventHandler(this.BasDroite_Click);
             // 
             // Fenetre
             // 
@@ -131,6 +134,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fenêtre";
             this.Load += new System.EventHandler(this.Fenêtre_Load);
+            this.Resize += new System.EventHandler(this.Fenetre_Resize);
             this.ResumeLayout(false);
 
         }
