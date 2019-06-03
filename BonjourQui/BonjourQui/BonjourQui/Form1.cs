@@ -37,7 +37,7 @@ namespace BonjourQui
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if()
+            
             btbienvenue.Enabled = true;
             
         }

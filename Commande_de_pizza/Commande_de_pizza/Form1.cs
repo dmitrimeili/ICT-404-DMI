@@ -17,7 +17,7 @@ namespace Commande_de_pizza
         string anchois;
         string capres;
         string jambon;
-        string crevettes;// faire la commande pour les supoplément 
+        string crevettes;
         public Form1()
         {
             InitializeComponent();
@@ -47,11 +47,13 @@ namespace Commande_de_pizza
 
         private void cmdcommander_Click(object sender, EventArgs e) 
         {
+            string garniture = "";
             if (!int.TryParse(txttable.Text, out NBtable))
             {
                 MessageBox.Show("veuillez introduire un numero de table ");
                 return;
             }
+            //pate
             if (rbextra.Checked == true)
             {
                 pate = "extra-fine";
@@ -68,8 +70,31 @@ namespace Commande_de_pizza
             {
                 pate = "épaisse";
             }
+            //garnitures
             
-            txtcommande.Text = "Pour la " + NBtable+": pâte "+pate+" avec";
+            if (chkanchois.Checked == true)
+            {
+               
+                garniture = garniture + "anchois, ";
+            }
+           
+            if (chkcapre.Checked == true)
+            {
+                garniture = garniture + "câpres, ";
+            }
+         
+            if (chkjambom.Checked == true )
+            {
+                garniture = garniture + "jambon, ";
+            }
+            if (chkcrevette.Checked == true)
+            {
+                garniture = garniture + "crevettes, ";
+            }
+            
+           
+
+            txtcommande.Text = "Pour la " + NBtable+": pâte "+pate+" avec "+garniture.Substring(0,garniture.Length-2);
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
@@ -78,6 +103,16 @@ namespace Commande_de_pizza
         }
 
         private void rbextra_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
