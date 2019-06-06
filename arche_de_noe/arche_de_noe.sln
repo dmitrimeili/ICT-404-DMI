@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arche_de_noe", "arche_de_noe\arche_de_noe.csproj", "{A27AA539-1C37-4EC6-9B27-5293BFF09021}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A27AA539-1C37-4EC6-9B27-5293BFF09021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27AA539-1C37-4EC6-9B27-5293BFF09021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27AA539-1C37-4EC6-9B27-5293BFF09021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27AA539-1C37-4EC6-9B27-5293BFF09021}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18A2A5F3-14D4-4FBF-BA62-4F0D014D5C30}
+	EndGlobalSection
+EndGlobal
