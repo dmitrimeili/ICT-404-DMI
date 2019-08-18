@@ -118,9 +118,12 @@
             // lblAnswer
             // 
             this.lblAnswer.AutoSize = true;
+            this.lblAnswer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer.ForeColor = System.Drawing.Color.Yellow;
             this.lblAnswer.Location = new System.Drawing.Point(211, 215);
             this.lblAnswer.Name = "lblAnswer";
-            this.lblAnswer.Size = new System.Drawing.Size(0, 17);
+            this.lblAnswer.Size = new System.Drawing.Size(0, 32);
             this.lblAnswer.TabIndex = 9;
             // 
             // cmdCE
@@ -131,6 +134,7 @@
             this.cmdCE.TabIndex = 10;
             this.cmdCE.Text = "CE";
             this.cmdCE.UseVisualStyleBackColor = true;
+            this.cmdCE.Click += new System.EventHandler(this.CmdCE_Click);
             // 
             // Form1
             // 
@@ -148,7 +152,7 @@
             this.Controls.Add(this.cmdSub);
             this.Controls.Add(this.cmdAdd);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Machine a calculer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

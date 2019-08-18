@@ -70,15 +70,19 @@ namespace Machine_a_calculer
                 }
                 if (lblFormule.Text == "-")
                 {
-
+                    answer = NbOne - NbTwo;
+                    lblAnswer.Text = answer.ToString();
                 }
                 if (lblFormule.Text == "X")
                 {
-
+                    answer = NbOne * NbTwo;
+                    lblAnswer.Text = answer.ToString();
                 }
                 if (lblFormule.Text == "/")
                 {
-
+                    answer = NbOne / NbTwo;
+                     
+                    lblAnswer.Text = answer.ToString("F2");
                 }
             }
         }
@@ -96,6 +100,13 @@ namespace Machine_a_calculer
         private void CmdDiv_Click(object sender, EventArgs e)
         {
             lblFormule.Text = "/";
+        }
+
+        private void CmdCE_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+
         }
     }
 }
