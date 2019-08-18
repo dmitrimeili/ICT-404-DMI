@@ -32,11 +32,28 @@ namespace arche_de_noe
 
         private void cmdbordter_Click(object sender, EventArgs e)
         {
-            if (lbxterre.Items.Count <= 1)
+            if (lbxbord.SelectedIndex == -1)
+            {
+                MessageBox.Show("Veuilliez selectioner un animal");
+            }
+            else
+            {
+                lbxterre.Items.Add(lbxbord.SelectedItem);
+                lbxbord.Items.RemoveAt(lbxbord.SelectedIndex);
+                if (lbxbord.Items.Count >= 1)
+                {
+                    cmdbordter.Enabled = true;
+                }
+                else
+                {
+                    cmdbordter.Enabled = false;
+                }
+            }
+            if (lbxterre.Items.Count >= 1)
             {
                 cmdterbord.Enabled = true;
             }
-            else
+            else// terbord
             {
                 cmdterbord.Enabled = false;
             }
@@ -57,7 +74,14 @@ namespace arche_de_noe
             {
                 lbxbord.Items.Add(lbxterre.SelectedItem);
                 lbxterre.Items.RemoveAt(lbxterre.SelectedIndex);
-                
+                if (lbxterre.Items.Count >= 1)
+                {
+                    cmdterbord.Enabled = true;
+                }
+                else
+                {
+                    cmdterbord.Enabled = false;
+                }
             }
             if (lbxbord.Items.Count >= 1)
             {
@@ -72,6 +96,11 @@ namespace arche_de_noe
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbxbord_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }
