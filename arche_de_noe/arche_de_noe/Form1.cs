@@ -48,6 +48,7 @@ namespace arche_de_noe
                 {
                     cmdbordter.Enabled = false;
                 }
+               
             }
             if (lbxterre.Items.Count >= 1)
             {
@@ -57,6 +58,19 @@ namespace arche_de_noe
             {
                 cmdterbord.Enabled = false;
             }
+            // Loop through all items the ListBox.
+            for (int x = 0; x < lbxterre.Items.Count; x++)
+            {
+                // Determine if the item is selected.
+                if (lbxterre.GetSelected(x) == true)
+                    // Deselect all items that are selected.
+                    lbxterre.SetSelected(x, false);
+                else
+                    // Select all items that are not selected.
+                    lbxterre.SetSelected(x, true);
+            }
+            // Force the ListBox to scroll back to the top of the list.
+            lbxterre.TopIndex = 0;
         }
 
         private void lbxbord_SelectedIndexChanged(object sender, EventArgs e)
@@ -100,7 +114,14 @@ namespace arche_de_noe
 
         private void lbxbord_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+            lbxbord.SelectedItem = null;
+            for (int ItemIndex = 0; ItemIndex < lbxbord.Items.Count; ItemIndex++)
+            {
+                lbxbord.SelectedIndex = ItemIndex;
+            }
+
         }
+
+        
     }
 }
