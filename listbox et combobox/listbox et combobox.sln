@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29209.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "listbox et combobox", "listbox et combobox.csproj", "{AEAF516C-1296-46B1-947E-DBB4235A7961}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEAF516C-1296-46B1-947E-DBB4235A7961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEAF516C-1296-46B1-947E-DBB4235A7961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEAF516C-1296-46B1-947E-DBB4235A7961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEAF516C-1296-46B1-947E-DBB4235A7961}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {430D84C1-EA7E-4CA2-B578-51A6FD340DA7}
+	EndGlobalSection
+EndGlobal
