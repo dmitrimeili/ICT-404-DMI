@@ -66,6 +66,7 @@ namespace listbox_et_combobox
                 else/*ajout des élement sélectionner*/
                 {
                     lst2.Items.Add(cbo1.SelectedItem);
+                    cbo1.Items.Remove(cbo1.SelectedItem);
                     cbo1.SelectedIndex = -1;
                     nbecole++;
                     txtNbEcole.Text =nbecole.ToString() ;
@@ -80,6 +81,7 @@ namespace listbox_et_combobox
                 else/*ajout des élement sélectionner*/
                 {
                     lst2.Items.Add(cbo2.SelectedItem);
+                    cbo2.Items.Remove(cbo2.SelectedItem);
                     cbo2.SelectedIndex = -1;
                     nbecole++;
                     txtNbEcole.Text = nbecole.ToString();
@@ -94,20 +96,46 @@ namespace listbox_et_combobox
                 else/*ajout des élement sélectionner*/
                 {
                     lst2.Items.Add(lst1.SelectedItem);
+                    lst1.Items.Remove(lst1.SelectedItem);
                     lst1.SelectedIndex = -1;
                     nbecole++;
                     txtNbEcole.Text = nbecole.ToString();
                 }
             }
             
+            if (nbecole<=1)
+            {
+                lblNbEcoles.Text = ("école sélectionée");
+            }
+            else if (nbecole>1)
+            {
+                lblNbEcoles.Text = ("écoles sélectionées");
+            }
+            
         }
+        
 
         private void CmdEffacer_Click(object sender, EventArgs e)
         {
-            
-            lst2.Items.RemoveAt(lst2.SelectedIndex);//pour effacer
-            nbecole--;
-            txtNbEcole.Text = nbecole.ToString();
+            if (lst2.SelectedIndex == -1)
+            {
+                MessageBox.Show("veuillez selectionner un élément a effacer");
+            }
+            else
+            {
+                lst2.Items.RemoveAt(lst2.SelectedIndex);//pour effacer
+                nbecole--;
+                txtNbEcole.Text = nbecole.ToString();
+                if (nbecole <= 1)
+                {
+                    lblNbEcoles.Text = ("école sélectionée");
+                }
+                else if (nbecole > 1)
+                {
+                    lblNbEcoles.Text = ("écoles sélectionées");
+                }
+            }
+           
         }
 
         private void CmdSupprimer_Click(object sender, EventArgs e)
@@ -131,6 +159,36 @@ namespace listbox_et_combobox
         }
 
         private void lst2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNbEcoles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmdAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            this.InitializeComponent();
+            cbo1.Items.Add("Swisscom");
+            cbo1.Items.Add("Salt");
+            cbo1.Items.Add("Sunrise");
+
+            lst1.Items.Add("CEPM");
+            lst1.Items.Add("CPNV");
+            lst1.Items.Add("ECL");
+            lst1.Items.Add("EPCL");
+            lst1.Items.Add("EPSIC");
+            lst1.Items.Add("ETML");
+
+            cbo2.Items.Add("Gymnase de Bugnon");
+            cbo2.Items.Add("Gymnase de Beaulieu");
+            cbo2.Items.Add("Gymnase d'Yverdon");
+        }
+
+        private void txtNbEcole_TextChanged(object sender, EventArgs e)
         {
 
         }

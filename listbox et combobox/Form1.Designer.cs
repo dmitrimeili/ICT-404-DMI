@@ -38,6 +38,7 @@
             this.lst2 = new System.Windows.Forms.ListBox();
             this.lblNbEcoles = new System.Windows.Forms.Label();
             this.txtNbEcole = new System.Windows.Forms.TextBox();
+            this.cmdAnnuler = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cbo1
@@ -70,7 +71,7 @@
             // 
             // cmdEffacer
             // 
-            this.cmdEffacer.Location = new System.Drawing.Point(337, 174);
+            this.cmdEffacer.Location = new System.Drawing.Point(337, 133);
             this.cmdEffacer.Name = "cmdEffacer";
             this.cmdEffacer.Size = new System.Drawing.Size(106, 23);
             this.cmdEffacer.TabIndex = 3;
@@ -80,7 +81,7 @@
             // 
             // cmdSupprimer
             // 
-            this.cmdSupprimer.Location = new System.Drawing.Point(337, 274);
+            this.cmdSupprimer.Location = new System.Drawing.Point(337, 213);
             this.cmdSupprimer.Name = "cmdSupprimer";
             this.cmdSupprimer.Size = new System.Drawing.Size(106, 23);
             this.cmdSupprimer.TabIndex = 4;
@@ -127,6 +128,7 @@
             this.lblNbEcoles.Size = new System.Drawing.Size(140, 17);
             this.lblNbEcoles.TabIndex = 8;
             this.lblNbEcoles.Text = "écoles sélectionnées";
+            this.lblNbEcoles.Click += new System.EventHandler(this.lblNbEcoles_Click);
             // 
             // txtNbEcole
             // 
@@ -134,12 +136,24 @@
             this.txtNbEcole.Name = "txtNbEcole";
             this.txtNbEcole.Size = new System.Drawing.Size(176, 22);
             this.txtNbEcole.TabIndex = 9;
+            this.txtNbEcole.TextChanged += new System.EventHandler(this.txtNbEcole_TextChanged);
+            // 
+            // cmdAnnuler
+            // 
+            this.cmdAnnuler.Location = new System.Drawing.Point(337, 286);
+            this.cmdAnnuler.Name = "cmdAnnuler";
+            this.cmdAnnuler.Size = new System.Drawing.Size(106, 23);
+            this.cmdAnnuler.TabIndex = 10;
+            this.cmdAnnuler.Text = "Annuler tout";
+            this.cmdAnnuler.UseVisualStyleBackColor = true;
+            this.cmdAnnuler.Click += new System.EventHandler(this.cmdAnnuler_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmdAnnuler);
             this.Controls.Add(this.txtNbEcole);
             this.Controls.Add(this.lblNbEcoles);
             this.Controls.Add(this.lst2);
@@ -170,6 +184,7 @@
         private System.Windows.Forms.ListBox lst2;
         private System.Windows.Forms.Label lblNbEcoles;
         private System.Windows.Forms.TextBox txtNbEcole;
+        private System.Windows.Forms.Button cmdAnnuler;
     }
 }
 
